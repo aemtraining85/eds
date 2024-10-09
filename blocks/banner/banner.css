@@ -1,0 +1,62 @@
+/* General styles for the hero banner */
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-container {
+    display: flex;
+    width: 100%;
+    height: 60vh; /* 60% of the viewport height */
+    border-radius: 10px; /* Rounded corners for the entire background */
+    overflow: hidden; /* Ensures that content does not overflow */
+}
+
+/* Form container styles */
+.form-container {
+    width: 50%; /* Form occupies 50% of the width */
+    background-color: yellow; /* Yellow background for the form */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    position: relative; /* Necessary for positioning */
+}
+
+/* Image container styles */
+.image-container {
+    width: 50%; /* Image container takes the remaining 50% */
+    height: 100%; /* Full height */
+    background-color: grey; /* Fallback background color */
+}
+
+/* Form styles */
+.hero-form {
+    display: flex;
+    flex-direction: column;
+    width: auto; /* The form will adjust its width based on content */
+}
+
+.hero-form label {
+    margin-bottom: 10px;
+}
+
+.hero-form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+    .background-container {
+        flex-direction: column;
+        height: auto; /* Adjust height to auto for stacking on mobile */
+    }
+
+    .form-container,
+    .image-container {
+        width: 100%; /* Full width for form and image on mobile */
+    }
+}
